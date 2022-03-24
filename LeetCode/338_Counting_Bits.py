@@ -8,26 +8,30 @@ def countBits0(n):
 
 def countBits(n):
     dp = [0]*(n+1)
-    print(dp)
+    # print(dp)
     offset = 1
     for i in range(1, n+1):
         if offset*2 == i:
             offset = i
         dp[i] = 1+dp[i-offset]
-    print(dp)
+    return dp
 
 
-countBits(8)
+# countBits(8)
 
 def countbits1(n):
-    ans = []
+    ans = [0]
     for i in range(1,n+1):
-        if i % 2 != 0:
-            i = 1+
+        ans.append(ans[i & (i-1)] + 1)
+    return ans
 
 
 
+print(countbits1(8))
+# print(1 // 2)
 
+def whatisnpercent(n):
+    for i in range(1, n+1):
+        print(i & (i-1)+1)
 
-print(countbits1(n))
-print(11 // 2)
+whatisnpercent(5)
