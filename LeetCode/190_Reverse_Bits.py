@@ -1,9 +1,11 @@
 def reverseBits(n):
     ans = 0
+    arr = []
     for i in range(32):
         bit = (n >> i) & 1
         ans = ans | (bit << (31 - i))
-        print(bit)
+        arr.append(bit)
+        print(arr)
     print(ans)
     # return ans
     
