@@ -3,7 +3,7 @@ def lengthOfLIS(nums):
     LIS = [1]*len(nums)
     
     for i in range(len(nums)-1,-1,-1):
-        print(nums[i])
+        # print(nums[i])
         for j in range(i+1, len(nums)):
             # print(nums[j])
             if nums[i] < nums[j]:
