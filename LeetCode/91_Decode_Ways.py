@@ -31,14 +31,16 @@ def numDecodings(s):
         if int(s[i-1]) != 0:
             dp[i] = dp[i-1]
         if i != 1 and '09' < s[i-2:i] < '27':
+            # print(s[i-2:i])
+            # print(dp[i-2])
             dp[i] += dp[i-2]
     return dp[-1]
 
 
 a = '226'
-b = '106'
-c = '12312461231122113311444112211331'
+b = '111'
+c = '612312'
 print(numDecodings(a))
-print(numDecodings(b))
-print(numDecodings(c))
+# print(numDecodings(b))
+# print(numDecodings(c))
 
