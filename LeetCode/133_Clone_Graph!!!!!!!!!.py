@@ -28,3 +28,17 @@ class Node:
             return copy
         
         return dfs(node) if node else None
+
+
+
+class Solution:
+    map = dict()
+    def cloneGraph(self, node: 'Node') -> 'Node':
+        if not node: return node
+        self.map[node] = Node(node.val, [])
+        for n in node.neighbors:
+            if n in self.map.keys():
+                self.map[node].neighbors.append(self.map[n])
+            else:
+                self.map[node].neighbors.append(self.cloneGraph(n))
+        return self.map[node]
