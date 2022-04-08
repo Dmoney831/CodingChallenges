@@ -22,6 +22,7 @@ def pacific_atlantic(matrix):
             print(f"x: {x}, y: {y}, dx: {dx}, dy: {dy}, new_x: {new_x}, new_y: {new_y}, visited: {(visited)}")
             if 0 <= new_x < m and 0 <=new_y < n and (new_x, new_y) not in visited and matrix[new_x][new_y] >=matrix[x][y]:
                 dfs(visited, new_x, new_y)
+
     for i in range(m):
         dfs(p_visited, i, 0)
         dfs(a_visited, i, n-1)
@@ -32,6 +33,9 @@ def pacific_atlantic(matrix):
 
 
 heights = [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]
+# heights = [[2,1],[1,2]]
+# heights = [[1,2,3],[2,1,3],[3,1,2]]
+
 print(pacific_atlantic(heights))
 
 
