@@ -1,6 +1,4 @@
-'''
 
-'''
 import collections
 def canFinish(numCourses, prerequisites): 
     courses = collections.defaultdict(set)
@@ -21,5 +19,12 @@ def canFinish(numCourses, prerequisites):
 
     '''
     Time complexity: O(E+V) where V is the number of courses, and E is the number of dependencies.
-    
+
     '''
+
+a = 2 
+b = [[1,0]]
+a = 2 
+b = [[1,0],[0,1]]
+
+print(canFinish(a,b))
