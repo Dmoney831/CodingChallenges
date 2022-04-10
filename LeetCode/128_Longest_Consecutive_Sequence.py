@@ -4,7 +4,9 @@ You must write an algorithm that runs in O(n) time.
 
 '''
 
+########failed for large data.
 '''
+
 def longestConsecutive(nums):
     x = sorted(nums)
     print(x)
@@ -25,7 +27,7 @@ def longestConsecutive(nums):
         return max(ans)+1
 
 '''
-
+#####new solution########
 
 def longestConsecutive(nums):
     numSet = set(nums)
