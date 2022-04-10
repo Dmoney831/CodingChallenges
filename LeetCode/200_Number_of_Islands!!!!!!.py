@@ -31,3 +31,8 @@ def numIslands(grid):
                 visited.add((x,y))
                 findIsland(x,y)
     return count
+
+
+'''
+We iterate each cell will cost O(m*n) is the size of the 2D list. Each cell will have four directions, the total (4*m*n)
+'''
