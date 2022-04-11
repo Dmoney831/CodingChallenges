@@ -9,9 +9,39 @@ def fib(n):
 
     print(ans[n])
     
-fib(50)
+fib(8)
+# fib(50)
+
+######Travel Grid#######
+def gridTraveler(row, col):
+    if row == 0 or col == 0:
+        return 0
+    # if row == 1 or col == 1:
+    #     return 1
+    arr = [ [ 1 for c in range(col)] for r in range(row)]
+    arr[0][0] = 0
+    # print(arr)
+    for i in range(1, row):
+        for j in range(1, col):
+            arr[i][j] = arr[i-1][j] + arr[i][j-1]
+    print(arr[row-1][col-1])
+
 
 '''
-gridTraveler(grid):
+*****Brute Force***** 
+=> Time Complexity = O(2^(m*n))
+=> Space Complexity = O(m+n)
+
+*****Memoized*******
+=> Time complexity = O(m * n)
+=> Space complexity = O(n + m)
 
 '''
+gridTraveler(3,3)
+# gridTraveler(18,18)
+
+
+
+
+
+
