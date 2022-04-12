@@ -14,7 +14,7 @@ After each move, if we are out of the bondary or we find water or we repeat the 
 def numIslands(grid):
     if not grid: return 0
     row = len(grid)
-    col = len(grid)
+    col = len(grid[0])
     visited = set()
     count = 0
     directions = [(-1,0), (0,1), (1,0), (0,-1)]
