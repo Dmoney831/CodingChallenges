@@ -104,8 +104,9 @@ def canSum(target, nums):
     for i in range(m):
         for j in range(nums[i], n+1):
             table[j] += table[j - nums[i]]
-            # print(f'table[j]: {table[j]}, [j-nums[i]]: {j-nums[i]}, table[j - nums[i]]: {table[j - nums[i]]}, nums[i]: {nums[i]} ')
-    # print(table)
+            # print(f'table[j]: {table[j]}, j: {j}, i: {i}, nums[i]: {nums[i]} [j-nums[i]]: {j-nums[i]}, table[j - nums[i]]: {table[j - nums[i]]}, nums[i]: {nums[i]} ')
+            # print(table)
+    
     return table[n] != 0
 
 '''
@@ -114,7 +115,16 @@ O(n*m)
 Space Complexity =>
 O(m)
 '''    
-    
+def canSum(target, nums):
+    dp = [0] * (target+1)
+    dp[0] = 1
+    for num in nums:
+        for i in range(1, target+1):
+            if num <= i:
+                dp[i] += dp[i - num]
+                
+    return dp[target] != 0
+
 
 
 print(canSum(7, [2,3]))
