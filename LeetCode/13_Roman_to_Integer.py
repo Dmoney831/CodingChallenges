@@ -19,8 +19,8 @@ def romanToInt(s):
             minusHun += 2
         l += 1
     
-    print(output)
-    print(minusOne, minusTen, minusHun)
+    # print(output)
+    # print(minusOne, minusTen, minusHun)
     print(output - (minusOne) - (minusTen*10) - (minusHun*100))
 
 
@@ -34,4 +34,4 @@ def romanToInt(s):
 s = "MCMXCIV"
 # Output: 1994
 
-romanToInt(s)
+# romanToInt(s)
