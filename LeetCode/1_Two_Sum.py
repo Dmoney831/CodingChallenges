@@ -12,14 +12,20 @@ def twoSum(nums, target):
 
     for i, n in enumerate(nums):
         diff = target-n
-        print(diff)
+        # print(diff)
         if diff in hash:
-            print(hash[diff], i, hash)
+            # print(hash[diff], i, hash)
             return [hash[diff], i]
         hash[n] = i
     return 
 
 nums = [2,7,11,15] 
 target = 9
-output = [1,2]
+output = [0,1]
+
+# nums = [3,2,4] 
+# target = 6
+# Output= [1,2]
+
 print(twoSum(nums, target))
+

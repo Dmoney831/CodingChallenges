@@ -9,5 +9,11 @@ var twoSum = function(nums, target) {
             map[num] = i;
         }
     }
-    
 };
+nums = [1,2,3,4,5]
+target = 9
+console.log(twoSum(nums, target))
+
+
+// nums = [1,2,3,4,5]
+// hash(nums)
