@@ -8,7 +8,7 @@ def isAnagram(s,t):
         if i in d1:
             d1[i] += 1
         else:
-            d2[i] = 1
+            d1[i] = 1
     for i in t:
         if i in d2:
             d2[i] += 1
