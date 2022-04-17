@@ -10,7 +10,7 @@ def removeElement(nums, val):
         if nums[i] != val:
             nums[k] = nums[i]
             k += 1
-    return k
+    print(k)
 
 
 
