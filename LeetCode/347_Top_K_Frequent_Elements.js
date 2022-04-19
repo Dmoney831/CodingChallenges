@@ -5,22 +5,22 @@ var topKFrequent = function(nums, k) {
     let map = new Map();
     for (let n of nums) {
         if(!map.has(n)) {
-            map.set(n, 1);
+            map.set(n, 1)
         }
         else {
-            map.set(n, map.get(n)+1);
+            map.set(n, map.get(n)+1)
         }
     };
-    let x = [];
+    let sorting = [];
     for (let [key, value] of map) {
-        x.push([key, value]);
+        sorting.push([key, value])
     };
-    x.sort(function(a,b) {
-        return b[1] - a[1];
+    sorting.sort(function(a,b) {
+        return b[1] - a[1]
     });
-    let z = [];
+    let answer = [];
     for (let i = 0; i < k; i++) {
-        z.push(x[i][0]);
+        answer.push(sorting[i][0])
     };
-    return z
+    return answer
 };
