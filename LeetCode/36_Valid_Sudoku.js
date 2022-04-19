@@ -5,15 +5,15 @@
 
 var isValidSudoku = function(board) {
     var map = {};
-    var tmp = 0;
+    var temp = 0;
     for (var i = 0; i < 9; i++) {
       for (var j = 0; j < 9; j++) {
-        tmp = board[i][j];
-        if (tmp === '.') continue;
-        if (map['i' + i + tmp] || map['j' + j + tmp] || map['b' + Math.floor(i / 3) + Math.floor(j / 3) + tmp]) return false;
-        map['i' + i + tmp] = 1;
-        map['j' + j + tmp] = 1;
-        map['b' + Math.floor(i / 3) + Math.floor(j / 3) + tmp] = 1;
+        temp = board[i][j];
+        if (temp === '.') continue;
+        if (map['i' + i + temp] || map['j' + j + temp] || map['b' + Math.floor(i / 3) + Math.floor(j / 3) + temp]) return false;
+        map['i' + i + temp] = 1;
+        map['j' + j + temp] = 1;
+        map['b' + Math.floor(i / 3) + Math.floor(j / 3) + temp] = 1;
         }
     }
     console.log(map)
@@ -22,6 +22,8 @@ var isValidSudoku = function(board) {
 
 // Time Complexity: O(n^2)
 // Space Complexity: O(n)
+
+
 
 // var board = 
 // [["5","3",".",".","7",".",".",".","."]
