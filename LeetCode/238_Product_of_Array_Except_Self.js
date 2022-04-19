@@ -27,3 +27,6 @@ var productExceptSelf = function(nums) {
 
 const nums = [1,2,3,4]
 productExceptSelf(nums)
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
