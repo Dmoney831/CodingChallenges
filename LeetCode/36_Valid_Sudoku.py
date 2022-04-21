@@ -53,20 +53,3 @@ board = [
 # ]
 
 print(isValidSudoku(board))  
-
-# var isValidSudoku = function(board) {
-#     var map = {};
-#     var temp = 0;
-#     for (var i = 0; i < 9; i++) {
-#       for (var j = 0; j < 9; j++) {
-#         temp = board[i][j];
-#         if (temp === '.') continue;
-#         if (map['i' + i + temp] || map['j' + j + temp] || map['b' + Math.floor(i / 3) + Math.floor(j / 3) + temp]) return false;
-#         map['i' + i + temp] = 1;
-#         map['j' + j + temp] = 1;
-#         map['b' + Math.floor(i / 3) + Math.floor(j / 3) + temp] = 1;
-#         }
-#     }
-#     console.log(map)
-#     return true;
-# };
