@@ -29,15 +29,15 @@ var lengthOfLongestSubstring = function(s) {
 
 var lengthOfLongestSubstring = function(s) {
     var set = new Set();
-    var l = 0;
+    var left = 0;
     var result = 0;
-    for (i in s) {
-        while (set.has(s[i])) {
-            set.delete(s[l])
-            l++
+    for (right in s) {
+        while (set.has(s[right])) {
+            set.delete(s[left])
+            left++
         }
-        set.add(s[i])
-        result = Math.max(result, i - l + 1)
+        set.add(s[right])
+        result = Math.max(result, right - left + 1)
     }
     console.log(result)
 };
