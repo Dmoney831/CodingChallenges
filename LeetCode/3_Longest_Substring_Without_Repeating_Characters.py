@@ -13,8 +13,8 @@ class Solution:
 
 
 s = "abcabcbb"
-b = "bbbbb"
-c = "pwwkew"
+# s = "bbbbb"
+# s = "pwwkew"
 
 # print(Solution.lengthOfLongestSubstring(self, "abcabcbb" ))
 
@@ -24,10 +24,15 @@ def lengthOfLongestSubstring(s: str) -> int:
     res = 0
     for r in range(len(s)):
         while s[r] in charSet:
+            print(charSet, s[r], s[l], l)
             charSet.remove(s[l])
             l += 1
         charSet.add(s[r])
         res = max(res, r - l + 1)
     return res
 
-print(lengthOfLongestSubstring(b))
+# def lengthOfLongestSubstring(s):
+#     sSet = set(s)
+#     return sSet
+
+print(lengthOfLongestSubstring(s))
