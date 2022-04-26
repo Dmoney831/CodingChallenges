@@ -10,11 +10,7 @@ var longestCommonPrefix = function(s) {
     }
     prefix = s[0].slice(0, left);
     console.log(prefix)
-
-
-
-
-}
+};
 
 s = ["flower","flow","flight"]
 // s = ["dog","racecar","car"]

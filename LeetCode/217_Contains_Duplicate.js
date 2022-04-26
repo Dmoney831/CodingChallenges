@@ -4,5 +4,5 @@ var containsDuplicate = function(nums) {
     
   };
   
-  var nums = [1,2,3,1]
-  containsDuplicate(nums)
+var nums = [1,2,3,1]
+containsDuplicate(nums)
