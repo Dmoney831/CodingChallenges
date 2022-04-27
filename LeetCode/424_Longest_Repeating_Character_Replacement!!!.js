@@ -14,5 +14,4 @@ var characterReplacement = function(s, k) {
         result = Math.max(result, right - left + 1)
     }
     return result
-
 }
