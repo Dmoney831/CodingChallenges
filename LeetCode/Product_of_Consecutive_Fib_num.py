@@ -15,14 +15,4 @@ def productFib(prod):
       x, y = y, x+y
     return [x, y, prod == x*y]
 
-       
-    
-
-
-
-print(productFib(4895))
-
-
-
-
 # 3 5 8 13 21 34 55 
