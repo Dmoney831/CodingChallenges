@@ -3,7 +3,7 @@ var minEatingSpeed = function(piles, h) {
     var result = r
     
     while (l <= r) {
-      var k = Math.floor(l + r) / 2
+      var k = Math.floor((l + r) / 2)
       var hours = 0
       for (let p of piles) {
         hours += (p / k)
