@@ -23,7 +23,7 @@ def findMin(nums):
 
 
 a = [3,4,5,1,2]
-b = [4,5,6,7,0,1,2]
-c = [11,13,15,17]
+a = [4,5,6,7,0,1,2]
+a = [11,13,15,17]
 
-print(findMin(b))
+print(findMin(a))
