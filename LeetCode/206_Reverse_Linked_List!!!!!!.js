@@ -9,3 +9,6 @@ var reverseList = function(head) {
     }
     return prev
 }
+
+// Time  Complexity of O(n)
+// Space Complexity of O(1)
