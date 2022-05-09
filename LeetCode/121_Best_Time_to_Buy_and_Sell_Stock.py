@@ -34,3 +34,13 @@ def maxProfit0(prices):
             
     return max_profit
 
+# ##############efficient solution ###########
+def maxProfit(prices):
+    buy = 0
+    profit = 0
+    for sell in range(len(prices)):
+        if prices[buy] > prices[sell]:
+            buy = sell
+        profit = max(profit, prices[sell] - prices[buy])
+    return profit
+

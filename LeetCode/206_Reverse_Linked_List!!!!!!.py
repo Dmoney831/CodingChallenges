@@ -16,3 +16,22 @@ class Solution:
         head.next = None
 
         return newHead
+# this solution above is recurisve function.
+# Time Complexity: O(n), linear
+# Space Complexity: O(n), 
+
+
+######### Optimal Solution #######
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        pre = None
+        cur = head
+        while cur:
+            tmp = cur.next
+            cur.next = pre
+            pre = cur
+            cur = tmp
+
+# This solution above is optimal solution.
+# time complexity: O(n)
+# space complexity: O(1)
