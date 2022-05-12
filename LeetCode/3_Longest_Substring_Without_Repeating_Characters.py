@@ -13,6 +13,7 @@ class Solution:
 
 
 s = "abcabcbb"
+s = "abccbadbb"
 # s = "bbbbb"
 # s = "pwwkew"
 
@@ -24,15 +25,13 @@ def lengthOfLongestSubstring(s: str) -> int:
     res = 0
     for r in range(len(s)):
         while s[r] in charSet:
-            print(charSet, s[r], s[l], l)
+            print(charSet, s[l], s[r], l)
             charSet.remove(s[l])
             l += 1
         charSet.add(s[r])
         res = max(res, r - l + 1)
     return res
 
-# def lengthOfLongestSubstring(s):
-#     sSet = set(s)
-#     return sSet
+
 
 print(lengthOfLongestSubstring(s))

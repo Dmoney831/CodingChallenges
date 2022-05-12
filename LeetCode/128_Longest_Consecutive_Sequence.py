@@ -31,6 +31,7 @@ def longestConsecutive(nums):
 
 def longestConsecutive(nums):
     numSet = set(nums)
+    print(numSet)
     longest = 0
     for n in nums:
         if (n - 1) not in numSet:

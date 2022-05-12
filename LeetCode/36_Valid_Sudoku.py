@@ -24,7 +24,7 @@ def isValidSudoku(board):
 
 # if rows[i][num] > 1 or columns[j][num] > 1 or boxes[box_index][num] > 1:
     
-    
+
 
 
 board = [

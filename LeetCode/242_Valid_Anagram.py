@@ -19,6 +19,33 @@ def isAnagram(s,t):
             return False
     return True
 
+def isAnagram(s, t):
+    if len(s) != len(t):
+        return False
+    hash = {}
+    for i in s:
+        if i not in hash:
+            hash[i] = 1 + hash.get(i, 0)
+        else: 
+            hash[i] += 1
+
+    for j in t:
+        if j in hash:
+            hash[j] -= 1
+            if hash[j] == 0:
+                del hash[j]
+        
+        else:
+            return False
+
+    return hash == {} 
+
+
+s = "anagram" 
+t = "nagaram"
+
+print(isAnagram(s,t))
+
 from collections import Counter
 
 def are_anagrams(s, t):

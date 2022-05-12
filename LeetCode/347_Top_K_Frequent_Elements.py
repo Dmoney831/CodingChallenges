@@ -25,6 +25,7 @@ def topKFrequent(nums, k):
 # make a dictionary that continas keys and values.
 # sort dictionary by value's size.
 # get the last two of the keys.
+
 def topKFrequent(nums, k):
     count = {}
     for n in nums:
@@ -35,6 +36,34 @@ def topKFrequent(nums, k):
     ans = list(res.keys())
     print(ans)
     print(ans[-k:])
+
+def topKFrequent(nums, k):
+    count = {}
+    for i in nums:
+        if i not in count:
+            count[i] = 1 + count.get(i, 0)
+        else:
+            count[i] += 1
+    res = dict(sorted(count.items(), key=lambda item: item[1]))
+    ans = list(res.keys())
+    print(ans)
+    print(ans[-k:])
+    print(res)
+    print(count)
+
+import heapq
+import collections
+def topKFrequent(nums, k):
+    res = []
+    dict = collections.Counter(nums)
+    for val, count in dict.items():
+        if len(res) < k:
+            heapq.heappush(res, (count, val))
+        else:
+            heapq.heappush(res, (count, val))
+            heapq.heappop(res)
+    print([val for count, val in res])
+    
 
 
 
