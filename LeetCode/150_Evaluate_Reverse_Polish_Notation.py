@@ -21,9 +21,9 @@ def evalRPN(tokens):
 tokens = ["2","1","+","3","*"]
 Output = 9
 tokens = ["4","13","5","/","+"]
-Outpu = 6
+Output = 6
 
-evalRPN(tokens)
+print(evalRPN(tokens))
 
 # Time Complexity: O(n)
 # 
