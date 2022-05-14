@@ -13,7 +13,7 @@ def kClosest(points, k):
     return [pair for value, pair in heap]
     
 
-
+# ****** Time Complexity: O(nlogn) where n is the size of input.
 
 points = [[1,3],[-2,2]] 
 k = 1
