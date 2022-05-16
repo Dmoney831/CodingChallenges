@@ -4,7 +4,7 @@ def isNStraightHand(hand, groupSize):
     for i in sorted(c):
         if c[i] > 0:
             for j in range(groupSize)[::-1]:
-                print(i, j, c[i+j])
+                print(f'i: {i}, c[i]: {c[i]}, j: {j}, i+j: {i+j} c[i + j]: {c[i+j]}')
                 c[i + j] -= c[i]
                 if c[i + j] < 0:
                     return False
@@ -31,13 +31,13 @@ def isNStraightHand(hand, groupSize):
             if count[i] == 0:
                 if i != minH[0]:
                     return False
+                heapq.heappop(minH)
     return True
 
 # ******Time Complexity: O(n*logn)
-
     
-# hand = [1,2,3,3,5,6,7,8,9]
-hand = [1,2,3,6,2,3,4,7,8]
+hand = [1,2,3,3,5,6,7,8,9]
+# hand = [1,2,3,6,2,3,4,7,8]
 groupSize = 3
 # Output: true
 
