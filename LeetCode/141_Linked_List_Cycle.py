@@ -5,3 +5,7 @@ def hasCycle(self, head: ListNode) -> bool:
         if fast == slow:
             return True
     return False
+
+
+# Time Complexity: O(m+n) where ms steps of fast pointer and n is steps of slow pointer.
+# Space Complexity: O(1)

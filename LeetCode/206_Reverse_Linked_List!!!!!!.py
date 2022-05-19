@@ -3,6 +3,9 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+from os import preadv
+
+
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head:
@@ -32,13 +35,16 @@ class Solution:
 ######### Optimal Solution #######
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        pre = None
-        cur = head
-        while cur:
-            tmp = cur.next
-            cur.next = pre
-            pre = cur
-            cur = tmp
+        prev = None
+        current = head
+        while current:
+            nxt = current.next
+            current.next = prev
+            prev = current
+            current = nxt
+        return prev
+            
+
 
 # This solution above is optimal solution.
 # time complexity: O(n)

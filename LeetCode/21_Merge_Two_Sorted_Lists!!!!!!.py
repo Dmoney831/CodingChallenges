@@ -12,3 +12,5 @@ def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
 
         new_list.next = l1 or l2
         return head.next
+
+    

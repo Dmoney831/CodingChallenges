@@ -10,3 +10,5 @@ class Solution:
             slow = slow.next
         slow.next = slow.next.next
         return head
+# time complexity: O(n)
+# space complexity: O(1)
