@@ -3,7 +3,7 @@ class LRUCache:
 
     def __init__(self, capacity: int):
         self.capacity = capacity
-        self.dict = collections.OrderedDict()
+        self.dict = OrderedDict()
         self.size = 0        
 
     def get(self, key: int) -> int:
