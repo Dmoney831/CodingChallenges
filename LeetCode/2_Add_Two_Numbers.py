@@ -52,19 +52,20 @@ class Solution:
 # print(addTwoNumbers(a,b))
 # print(addTwoNumbers(c,d))
 # print(addTwoNumbers(e,f))
-
-# def addTwoNumbers(l1, l2):
-#     x = []
-#     y = []
-#     answer = []
-#     for i in l1:
-#         x.append(str(i))
-#     for j in l2:
-#         y.append(str(j))
-#     num1 = "".join(x)
-#     num2 = "".join(y)
-#     new_num = int(num1) + int(num2)
-#     rev_num = str(new_num)[::-1]
-#     for char in rev_num:
-#         answer.append(char)
-#     return answer
+def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+    result = ListNode()
+    ptr = result # the current node of the result list during loop
+    carry = 0
+    while l1 or l2 or carry: # if l1 or l2 is not None or carry is not zero. if carry still nonzero after both list has ended, the loop will continue to add the remaining to digits to result List
+        if l1:
+            carry += l1.val
+            l1 = l1.next
+        if l2:
+            carry += l2.val
+             l2 = l2.next
+            
+        ptr.next = ListNode(carry%10)  # if  sum is greater than 9, only add the last digit to the list and carry the remaining part to next loop
+        ptr = ptr.next
+        carry //= 10
+        
+    return result.next
