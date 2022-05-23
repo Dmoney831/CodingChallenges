@@ -20,8 +20,16 @@ def reverse(x):
     if x == 0:
         return 0
 
-    
 
+def reverse(x):
+    a = str(abs(x))
+    b = a[::-1]
+    if int(b) > 2**31 -1:
+        return 0
+    if x >= 0:
+        return int(b)
+    if x < 0:
+        return int(b) * -1
 # z = 123
 z = -123
 # z = 120

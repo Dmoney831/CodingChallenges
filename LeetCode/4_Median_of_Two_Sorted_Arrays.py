@@ -12,7 +12,18 @@ def findMedianSortedArrays(num1, num2):
         return (result[median_even] + result[median_even + 1])/2
 
 
-a = [1,2,5,5]
+a = [1,2,5,8]
 b = [3,4,7,2]
+
+def findMedianSortedArrays(num1, num2):
+    sort = sorted(num1 + num2)
+    mid = len(sort) // 2
+    if len(sort) % 2 != 0:
+        
+        return sort[mid]
+    if len(sort) % 2 == 0:
+        
+        return (sort[mid] + sort[mid] + 1) / 2
+
 
 print(findMedianSortedArrays(a,b))

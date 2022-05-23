@@ -23,6 +23,15 @@ def romanToInt(s):
     # print(minusOne, minusTen, minusHun)
     print(output - (minusOne) - (minusTen*10) - (minusHun*100))
 
+def romanToInt(s):
+    dictt = { "I": 1, "V":5, "X": 10, "L":50, "C": 100, "D": 500, "M": 1000 }
+    output = 0
+    for i in range(0, len(s)):
+        if i > 0 and dictt[s[i-1]] < dictt[s[i]]:
+            output -= dictt[s[i-1]] * 2
+
+        output += dictt[s[i]]
+    return output
 
 
 # s = "III"
@@ -34,4 +43,4 @@ def romanToInt(s):
 s = "MCMXCIV"
 # Output: 1994
 
-# romanToInt(s)
+print(romanToInt(s))

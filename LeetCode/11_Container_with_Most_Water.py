@@ -1,10 +1,3 @@
-# def maxArea(height):
-#     max_area = 0
-#     for h1 in range(len(height)-1):
-#         for h2 in range(h1, len(height)):
-#             area = min(height[h1], height[h2]) * (h2 - h1)
-#             max_area = max(area, max_area)
-#     print(max_area)
 
 def maxArea(height):
     left = 0
@@ -18,6 +11,20 @@ def maxArea(height):
         else:
             right -= 1
     return ans
+
+# area = base * height
+def maxArea(height):
+    left = 0
+    right = len(height) - 1
+    answer = 0
+    while left < right:
+        area = min(height[left] * height[right] * (right - left))
+        answer = max(answer, area)
+        if height[left] < height[right]:
+            left += 1
+        else:
+            right -= 1
+    return answer
 
 
 
