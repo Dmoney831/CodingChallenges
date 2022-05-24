@@ -1,4 +1,3 @@
-
 def generateParenthesis(n):
     res = []
 
@@ -23,20 +22,21 @@ def generateParenthesis(n):
     res = []
     def backtrack(openN, closedN):
         if openN == closedN == n:
+            # print(res)
             res.append("".join(stack))
             return
         if openN < n:
             stack.append("(")
+            print(stack)
             backtrack(openN + 1, closedN)
             stack.pop()
+            # print(stack)
         if closedN < openN:
             stack.append(")")
             backtrack(openN, closedN + 1)
             stack.pop()
     backtrack(0,0)
-    print(len(res))
+    # print(len(res))
     return res
 
-
-
-print(generateParenthesis(4))
+print(generateParenthesis(3))

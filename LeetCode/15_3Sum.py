@@ -1,15 +1,3 @@
-# def threeSum(nums):
-#     answer = []
-#     x = sorted(nums)
-#     for i in range(len(x)-2):
-#         for j in range(i+1,len(x)-1):
-#             for k in range(j+1, len(x)):
-#                 if x[i] + x[j] + x[k] == 0:
-#                     if sorted([x[i],x[j],x[k]]) not in answer:
-#                         answer.append(sorted([x[i],x[j],x[k]]))
-
-#     return answer
-
 
 def threeSum(nums):
     ans = []

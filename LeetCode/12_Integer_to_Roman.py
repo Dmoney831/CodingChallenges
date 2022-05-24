@@ -24,4 +24,6 @@ num = 1994
 # Output: "MCMXCIV"
 # Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
+num = 3212
+
 print(Integer_to_Roman(num))
