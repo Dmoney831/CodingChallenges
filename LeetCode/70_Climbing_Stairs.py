@@ -34,6 +34,6 @@ def climbStairs(n):
         
 
 # a = 2
-a = 3
+a = 4
 # a = 23
-# print(climbStairs(a))
+print(climbStairs(a))

@@ -26,6 +26,21 @@ def combinationSum(candidates, target):
     
 
 
+def combinationSum(candidates, target):
+    res = []
+    candidates.sort()
+
+    def dfs(cur, path):
+        if cur == 0:
+            res.append(path)
+        for n in candidates:
+            if n > cur:
+                break
+            if path and n < path[-1]:
+                continue
+            dfs(cur - n, path + [n])
+    dfs(target, [])
+    return res
 
 
 candidates = [2,3,6,7] 

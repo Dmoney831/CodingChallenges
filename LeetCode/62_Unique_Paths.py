@@ -21,3 +21,9 @@ init the first row and first column that will cost O(m+n).
 Then iterate all 2D dp array, it will cost O(m*n). 
 In total will cost (m+n+mn), so generally, it's O(n^2).
 '''
+
+
+
+m = 3 
+n = 3
+print(uniquePaths(m,n))
