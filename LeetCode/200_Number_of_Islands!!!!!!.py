@@ -36,3 +36,20 @@ def numIslands(grid):
 '''
 We iterate each cell will cost O(m*n) is the size of the 2D list. Each cell will have four directions, the total (4*m*n)
 '''
+
+def numIslands(grid):
+    islands = 0
+
+    def dfs(grid, r, c):
+        grid[r][c] = '0'
+        lst = [(r-1, c), (r+1, c), (r, c-1), (r, c+1)]
+        for row, col in lst:
+            if 0 <= row < len(grid) and 0 <= col < len(grid[row]) and grid[row][col] == '1':
+                dfs(grid, row, col)
+
+    for r in range(len(grid)):
+        for c in range(len(grid[r])):
+            if grid[r][c] == '1':
+                dfs(grid, r, c)
+                islands += 1
+    return islands
