@@ -32,6 +32,24 @@ def numIslands(grid):
                 findIsland(x,y)
     return count
 
+def numIslands(grid):
+    if not grid: return 0
+    row = len(grid)
+    col = len(grid[0])
+    visited = set()
+    count = 0
+    directions = [(-1,0), (0,1), (1,0), (0,-1)]
+    def findIsland(x,y):
+        for dx, dy in directions:
+            newX, newY = x+dx, y+dy
+            if 0 <= newX < row and 0 <= newY < col and grid[newX][newY] == '1' and (newX, newY) not in visited:
+                visited.add((newX, newY))
+    for x in range(row):
+        for y in range(col):
+            if grid[x][y] == '1' and (x,y) not in visited:
+                count += 1
+                visited.add((x,y))
+                findIsland(x,y)
 
 '''
 We iterate each cell will cost O(m*n) is the size of the 2D list. Each cell will have four directions, the total (4*m*n)
