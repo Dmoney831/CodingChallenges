@@ -3,16 +3,29 @@ def findDuplicate(nums):
     while slow != fast:
         slow = nums[slow]
         fast = nums[nums[fast]]
-        print(slow, fast)
+        # print(slow, fast)
     slow = 0
     print("next")
     while slow != fast:
         slow = nums[slow]
         fast = nums[fast]
-        print(slow, fast)
+        # print(slow, fast)
     return slow
         
-    # return nums[slow]
+def findDuplicate(nums):
+    slow, fast = 0, 0
+    while True:
+        slow = nums[slow]
+        fast = nums[nums[fast]]
+        if slow == fast:
+            break
+    
+    slow2 = 0
+    while True:
+        slow = nums[slow]
+        slow2 = nums[slow2]
+        if slow == slow2:
+            return slow
 
 def findDuplicate(nums):
     low = 1
