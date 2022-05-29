@@ -1,4 +1,5 @@
 from collections import Counter
+from typing import OrderedDict
 
 def topKFrequent(nums, k):
     count = {}
@@ -36,7 +37,8 @@ def topKFrequent(nums, k):
     ans = list(res.keys())
     print(ans)
     print(ans[-k:])
-
+    
+import collections
 def topKFrequent(nums, k):
     count = {}
     for i in nums:
@@ -65,11 +67,19 @@ def topKFrequent(nums, k):
     print([val for count, val in res])
     
 
-
-
-nums = [1,1,1,2,2,3]  
+def topKFrequent(nums, k):
+    count = {}
+    for n in nums:
+        count[n] = 1 + count.get(n, 0)
+    count = dict(sorted(count.items(), key=lambda item: item[1]))
+    # count = dict(sorted(count.items())) # dict(sorted(count.items()))
+    print(count)
+    ans = list(count.keys())
+    print(ans)
+    return ans[-k:]
+nums = [5,5,5,5,5,4,1,1,1,2,2,3,4,4,4,4]  
 k = 2
 
 # nums = [4,1,-1,2,-1,2,3]
 # k = 2
-topKFrequent(nums, k)
+print(topKFrequent(nums, k))
