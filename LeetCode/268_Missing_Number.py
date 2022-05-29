@@ -5,7 +5,9 @@ def missingNumber(nums):
     print(ans)
 
 
-
+def missingNumber(nums):
+    n = len(nums)
+    return (n * (n+1)) / 2 - sum(nums)
 
 
 a = [3,0,1]
@@ -14,4 +16,4 @@ a = [0,1]
 # a = [0]
 # a = [1]
 # a = [9,6,4,2,3,5,7,0,1]
-missingNumber(a)
+print(missingNumber(a))

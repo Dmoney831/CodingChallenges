@@ -8,12 +8,13 @@ def sorting(array):
         hash[i] = hash.get(i, 0) + 1
     
     res = []
-    x = {k: v for k, v in sorted(hash.items(), key=lambda item: item[1])}
+    hash = {k: v for k, v in sorted(hash.items(), key=lambda item: item[1])}
+    print(hash)
     
-    for i in x:
-        for _ in range(x[i]):
+    for i in hash:
+        for _ in range(hash[i]):
             res.append(i)
         
-    return hash
+    return res
 
 print(sorting(array))
