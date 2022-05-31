@@ -5,6 +5,7 @@ def findRelativeRanks(score):
     # print(rank)
     # print(list( map(dict(zip(sort, rank)).get, score) ))
     print(( dict(zip(sort, rank)) ))
+    print(( map(dict(zip(sort, rank))).get, score ))
     return list(map(dict(zip(sort, rank)).get, score))
 
 
