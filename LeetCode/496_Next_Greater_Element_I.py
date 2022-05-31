@@ -9,6 +9,18 @@ def nextGreaterElement(nums1, nums2):
     print(dct)
     return [dct.get(n, -1) for n in nums1]
 
+def nextGreaterElement(nums1, nums2):
+    hash = {}
+    stack = []
+
+    for n in nums2:
+        # print(n)
+        while stack and stack[-1] < n:
+            hash[stack.pop()] = n    
+        stack.append(n)
+    print(hash)
+    return [hash.get(n, -1) for n in nums1]
+    
 
     
 

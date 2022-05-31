@@ -15,12 +15,13 @@ def pacific_atlantic(matrix):
     a_visited = set()
     directions = [(-1, 0), (0, -1),  (1, 0), (0, 1)]
     def dfs(visited, x,y):
+        # print(visited)
         visited.add((x,y))
         # print(visited)
         for dx, dy in directions: 
             new_x, new_y = x+dx, y+dy
-            print(f"x: {x}, y: {y}, dx: {dx}, dy: {dy}, new_x: {new_x}, new_y: {new_y}, visited: {(visited)}")
-            if 0 <= new_x < m and 0 <=new_y < n and (new_x, new_y) not in visited and matrix[new_x][new_y] >=matrix[x][y]:
+            # print(f"x: {x}, y: {y}, dx: {dx}, dy: {dy}, new_x: {new_x}, new_y: {new_y}, visited: {(visited)}")
+            if 0 <= new_x < m and 0 <=new_y < n and (new_x, new_y) not in visited and matrix[new_x][new_y] >= matrix[x][y]:
                 dfs(visited, new_x, new_y)
 
     for i in range(m):
