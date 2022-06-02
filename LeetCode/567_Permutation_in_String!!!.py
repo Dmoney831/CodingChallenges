@@ -36,6 +36,23 @@ def checkInclusion(s1, s2):
             return True
     return False
         
+def checkInclusion(s1, s2):
+    w = len(s1)
+    hash = {}
+    for i in s1:
+        hash[i] = hash.get(i, 0) + 1
+    
+    for j in range(len(s2)):
+        if s2[j] in hash:
+            hash[s2[j]] -= 1
+
+        if j >= w and s2[j-w] in hash:
+            hash[s2[j-w]] += 1
+
+        if all([hash[j] == 0 for j in hash]):
+            return True
+            
+    return False
 
 
 s1 = "ab" 

@@ -24,6 +24,13 @@ def change(amount, coins):
     dp[0] = 1
     for coin in coins:
         for i in range(1, amount+1):
+            # print(i)
             if coin <=i:
+                print(i-coin)
                 dp[i] += dp[i - coin]
+    print(dp)
     return dp[amount]
+
+amount = 5
+coins = [1,2,5]
+print(change(amount, coins))
