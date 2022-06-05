@@ -11,7 +11,7 @@ def fourSum(nums, target):
         for i in range(len(nums)):
             if i == 0 or nums[i-1] != nums[i]:
                 for subset in kSum(nums[i+1:], target - nums[i], k-1):
-                    res.append([nums[i] + subset])
+                    res.append([nums[i]] + subset)
         return res
     
     def twoSum(nums, target):
@@ -28,6 +28,6 @@ def fourSum(nums, target):
 
 
 nums, target = [1,0,-1,0,-2,2], 0
-nums, target = [2,2,2,2,2], 8
+# nums, target = [2,2,2,2,2], 8
 
 print(fourSum(nums, target))
