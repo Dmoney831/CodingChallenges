@@ -31,3 +31,6 @@ nums, target = [1,0,-1,0,-2,2], 0
 # nums, target = [2,2,2,2,2], 8
 
 print(fourSum(nums, target))
+
+# Time Complexity: O(n^(k-1)). we have k-2 loops iterating over n elements, and twoSum is O(n). Note that for k > 2, sorting the array does not change the overall time complexity.
+# Space Complexity: O(n) for the hash set. The space needed for the recursion will not exceed O(n).
