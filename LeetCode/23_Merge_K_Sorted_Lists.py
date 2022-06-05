@@ -20,5 +20,8 @@ lists = [[1,4,5], [1,3,4], [2,6]]
 lists = []
 lists = [[]]
 
-# Time Complexity: O(N log N) where N is the total number of nodes.and
+# Time Complexity: O(N log N) where N is the total number of nodes. 
+    # Collecting all the values costs O(N) time.
+    # A stable sorting algorithm costs O(N log N) time.
+    # Iterating for creating the linked list costs O(N) time.
 # Space complexity: O(N)
