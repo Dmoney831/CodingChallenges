@@ -13,6 +13,9 @@ import java.awt.*;
 public class App {
     public static void main(String[] args) {
         String message = "hi" + "!!";
-        System.out.println(message);
+        // System.out.println(message.endsWith("!!"));
+        // System.out.println(message.startsWith("!!"));
+        // System.out.println(message.length());
+        System.out.println(message.indexOf("h"));
     }
 }
